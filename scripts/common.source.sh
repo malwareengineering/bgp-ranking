@@ -1,6 +1,6 @@
 set -e
 
-PREFIX="${HOME}/gits/"
+PREFIX="/opt/"
 BGP_RANKING_ROOT="${PREFIX}bgp-ranking"
 PYTHON="/usr/bin/python"
 NICE=""

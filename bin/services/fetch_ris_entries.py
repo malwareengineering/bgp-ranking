@@ -62,7 +62,6 @@ def __connect():
     global server_socket
     server_socket = socket.create_connection((server,port))
     # Skip the welcome message
-    server_socket.recv(1024)
     connected = True
 
 def __disconnect():
@@ -78,7 +77,7 @@ def fetch_whois(query):
     """
         Fetch the RIS RIPE informations. Keep the connection is possible.
     """
-    server_socket.send('-k -M ' + query + '\n')
+    server_socket.send('-K -M ' + query + '\n')
     text = ''
     fs = server_socket.makefile()
     prec = ''
